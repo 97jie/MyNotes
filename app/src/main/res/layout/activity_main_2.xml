@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorbackground"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_main2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="MyNotes"
+            android:background="@color/colorapperence"
+            >
+        </android.support.v7.widget.Toolbar>
+        <EditText
+            android:id="@+id/grid_et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/translucent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColorHint="@color/colorapperence"
+            android:textColor="@color/colortime"
+            android:paddingLeft="10dp"
+            android:hint=" 搜索"
+            android:drawableLeft="@mipmap/search"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <GridView
+                android:id="@+id/gv_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="auto_fit"
+                android:columnWidth="120dp"
+                android:paddingTop="10dp"
+                android:background="@drawable/border"
+                android:paddingRight="1px"
+                android:paddingBottom="1px"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp">
+
+            </GridView>
+            <EditText
+                android:id="@+id/tv_noNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorbackground"
+                android:text="NO NOTE !"
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="15dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/colorapperence" />
+</FrameLayout>

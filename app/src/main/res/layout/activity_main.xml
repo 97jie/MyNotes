@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorbackground"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="MyNotes"
+            android:background="@color/colorapperence"
+            >
+        </android.support.v7.widget.Toolbar>
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/translucent"
+            android:drawableLeft="@mipmap/search"
+            android:hint=" 搜索"
+            android:textColorHint="@color/colorapperence"
+            android:textColor="@color/colortime"
+            android:paddingLeft="10dp" />
+        <!--</LinearLayout>-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ListView
+                android:id="@+id/lv_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/bnb_main"
+                android:background="@drawable/border"
+                android:divider="@drawable/border"
+                android:paddingBottom="1px"
+                ></ListView>
+            <EditText
+                android:id="@+id/tv_noNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorbackground"
+                android:text="NO NOTE !"
+                android:textColor="@color/colorAccent"
+                android:gravity="center"
+                />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="15dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/colorapperence" />
+    <!--<com.ashokvarma.bottomnavigation.BottomNavigationBar-->
+        <!--android:id="@+id/bnb_main"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true">-->
+
+    <!--</com.ashokvarma.bottomnavigation.BottomNavigationBar>-->
+</FrameLayout>
